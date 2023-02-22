@@ -1,0 +1,82 @@
+
+.main-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+    display:flex;
+    align-items: center;
+    height: 68px;
+    transition-timing-function: ease-in;
+  transition: all 0.5s;
+}
+.nav_black {
+    background-color:#141414;;
+    transition: ease-in-out 800ms;
+  }
+.main-menu{
+    width: 600px;
+    height: 33px;
+    margin-top: 10px;
+}
+.logo-brand img{
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.main-menu ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    font-family:"Google Sans","Roboto",Arial,sans-serif;
+    font-style: normal;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+.main-menu li:hover a:hover{
+    color: #b3b3b3;
+}
+.main-menu a {
+    text-decoration: none;
+    color: white;
+}
+.secondary-header{
+    margin-left: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.secondary-header img{
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+#icon{
+    width: 50px;
+    height: 50px;
+}
+#addBtn{
+    border: none;
+    background-color: #FF0000;
+    color: white;
+    height: 30px;
+    width: 80px;
+    border-radius: 14px;
+    font-weight: 600;
+}
+#addBtn:hover{
+    background-color: #d91111;
+}
+input{
+    opacity: 0.8;
+    width: 180px;
+    border-radius: 6px;
+}
+input:focus{
+    outline-color: #FF0000;
+}
