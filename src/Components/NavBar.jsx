@@ -5,7 +5,8 @@ import search from "./img/search-svgrepo-com.svg";
 import bell from "./img/notification-svgrepo-com.svg";
 import icon from "./img/filmfix-website-favicon-color.png";
 import AddNew from "./AddNew.jsx";
-const NavBar = ({ add,setSearch }) => {
+import { Link } from "react-router-dom";
+const NavBar = ({ add, setSearch }) => {
   const [scroll, setScroll] = useState(false);
   const [searchIcon, setsearchIcon] = useState(false);
   const [Show, setShow] = useState(false);
@@ -26,18 +27,20 @@ const NavBar = ({ add,setSearch }) => {
       </div>
       <div className="main-menu">
         <ul>
-          <li style={{ fontWeight: "700" }}>
-            <a href="#home">Home</a>
-          </li>
-          <li>
-            <a href="#tvshows">TV SHows</a>
-          </li>
-          <li>
-            <a href="#movies">Movies</a>
-          </li>
-          <li>
-            <a href="#mylist">My List</a>
-          </li>
+          <Link to="/">
+            <li style={{ fontWeight: "700" }}>Home</li>
+          </Link>
+          <Link to="/tvShows">
+            {" "}
+            <li>TV Shows</li>
+          </Link>
+          <Link to="/movies">
+            {" "}
+            <li>Movies</li>
+          </Link>
+          <Link to="/myList">
+            <li>My List</li>
+          </Link>
           <li>
             {" "}
             <button id="addBtn" onClick={() => setShow(true)}>
@@ -48,7 +51,13 @@ const NavBar = ({ add,setSearch }) => {
         </ul>
       </div>
       <div className="secondary-header">
-        {searchIcon && <input type={Text} placeholder="Search" onChange={e=>setSearch(e.target.value)} />}
+        {searchIcon && (
+          <input
+            type={Text}
+            placeholder="Search"
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        )}
         <img
           onClick={() => setsearchIcon(!searchIcon)}
           src={search}

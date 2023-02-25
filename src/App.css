@@ -123,3 +123,50 @@ top: 2%;
   color: #b3b3b3;
 cursor: pointer;
 }
+/* movie detail */
+.content {
+  margin-top: 40px;
+  height: 600px;
+  position: relative;
+top: 40px;
+  border-top: #FF0000 solid 2px;
+  border-bottom: #FF0000 solid 2px;
+
+}
+
+.background {
+  display: flex;
+  height: 100%;
+}
+
+.left {
+  background: black;
+  width: 30%;
+  position: relative;
+}
+
+.left:before {
+  content: '';
+  position: absolute;
+  background-image: linear-gradient(to right,#000,transparent);
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  width: 275px;
+}
+
+.right {
+  width: 70%;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 30px
+}
